@@ -1,191 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume</title>
-<style>
-    body {
-        font-family: verdana;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        transition: background-color 0.5s ease;
-    }
-    .container {
-        width: 80%;
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        background-color:#FFEFD5;
-    }
-    h2 {
-        color: #3671F1 ;
-    }
-    h1 {
-        border-bottom: 2px solid #333;
-        padding-bottom: 10px;
-    }
-    p {
-        margin: 10px 0;
-    }
-    .section {
-        margin: 20px 0;
-    }
-    .skills, .projects, .contact {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .skill, .project, .contact-info {
-        width: 48%;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .skill:hover, .project:hover, .contact-info:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 0 15px rgba(0, 0, 0, 0.4);
-    }
-    .contact-info a {
-        text-decoration: none;
-        color: #0073e6;
-        transition: color 0.3s ease;
-    }
-    .contact-info a:hover {
-        color: #005bb5;
-    }
-    .progress {
-        background: #e0e0e0;
-        border-radius: 25px;
-        overflow: hidden;
-        margin: 10px 0;
-        position: relative;
-    }
-    .progress-bar {
-        height: 25px;
-        background: #0073e6;
-        text-align: center;
-        color: #fff;
-        line-height: 25px;
-        border-radius: 25px 0 0 25px;
-        position: relative;
-    }
-    .progress-bar:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.1);
-        transition: width 0.3s ease;
-    }
-    .progress:hover .progress-bar:after {
-        width: 0;
-    }
-    @media (max-width: 768px) {
-        .skill, .project, .contact-info {
-            width: 100%;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+            font-family: 'Arial', sans-serif;
+            color: #333;
         }
-    }
-    .fade-in {
-        opacity: 0;
-        animation: fadeIn 1s forwards;
-    }
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
         }
-    }
-</style>
+        .container h1 {
+            font-size: 2.5em;
+            color: #FF69B4;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .heart {
+            font-size: 3em;
+            color: #FF1493;
+            animation: heartbeat 1.5s infinite;
+        }
+        .button {
+            margin-top: 20px;
+        }
+        .button button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background: #FF69B4;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+        .button button:hover {
+            background: #FF1493;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container fade-in">
-        <h1>Ayush Chauhan</h1>
-        <div class="section">
-            <h2>About Me</h2>
-            <p>Myself Ayush Chauhan, currently I am doing B.E in Information Technology field. Intermediate level experience in HTML, CSS, JavaScript, and ReactJS, and I want to become a front-end developer.</p>
-        </div>
-        <div class="section">
-            <h2>Contact Information</h2>
-            <div class="contact">
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:amc13092003@gmail.com">amc13092003@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+919725833800">+91 97258 33800</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/ayush-chauhan-167010248/" target="_blank">ayush-chauhan-167010248</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill">
-                    <h3>Technical Skills</h3>
-                    <p>HTML</p>
-                    <div class="progress"><div class="progress-bar" style="width: 80%;">80%</div></div>
-                    <p>CSS</p>
-                    <div class="progress"><div class="progress-bar" style="width: 75%;">75%</div></div>
-                    <p>JavaScript</p>
-                    <div class="progress"><div class="progress-bar" style="width: 70%;">70%</div></div>
-                    <p>ReactJS</p>
-                    <div class="progress"><div class="progress-bar" style="width: 65%;">65%</div></div>
-                    <p>Bootstrap</p>
-                    <div class="progress"><div class="progress-bar" style="width: 70%;">70%</div></div>
-                </div>
-                <div class="skill">
-                    <h3>Soft Skills</h3>
-                    <p>&gt; Problem Solving</p>
-                    <p>&gt; Decision Making</p>
-                    <p>&gt; Time Management</p>
-                    <p>&gt; Creativity</p>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Diabetes Prediction System</h3>
-                </div>
-                <div class="project">
-                    <h3>Face Emotion Detection</h3>
-                </div>
-                <div class="project">
-                    <h3>Portfolio Website</h3>
-                </div>
-                <div class="project">
-                    <h3>Commission Calculation Webpage</h3>
-                </div>
-                <div class="project">
-                    <h3>Eklavya School Website</h3>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <p>Bachelor of Information Technology (2021-2025)</p>
-            <p>MBIT, CVM University</p>
-            <p>Higher Secondary Education (2019-2021)</p>
-            <p>Aryam Educational Academy</p>
-            <p>Secondary School Education (2018-2019)</p>
-            <p>Aryam Educational Academy</p>
-        </div>
-        <div class="section">
-            <h2>Certificates</h2>
-            <p>SSIP Hackathon-2022</p>
-            <p>Code-unnati Programme Certificate - 2023 (12/2023 - 03/2024)</p>
-            <p>Google Developer Student Clubs Event Platform - 2023 (08/2023 - 10/2023)</p>
-            <p>‘HARDWAR‘ Event - Adhishthan’22</p>
-            <p>Summer Internship</p>
-        </div>
-        <div class="section">
-            <h2>Hobbies</h2>
-            <p>Coding</p>
-            <p>Problem Solving</p>
-            <p>Listening to Music</p>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>To the best and cutest friend ever,</p>
+        <p>You make my world brighter every day! ❤</p>
+        <div class="heart">&#10084;</div>
+        <div class="button">
+            <button onclick="alert('You are amazing! Thank you for being you! This world is a better place with you in it. Never forget how special you are!')">Click Me!</button>
         </div>
     </div>
 </body>
